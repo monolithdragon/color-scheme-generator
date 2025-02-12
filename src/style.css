@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900');
+
+:root {
+  /* COLORS */
+  --color-bg: #1F2937;
+  --color-primary: #D5D4D8;
+  --color-btn-bg: #3D4B60;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
+#app {
+  margin: auto;
+  width: 550px;
+  height: 550px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--color-bg);
+}
+
+/* Form */
+.header > form {
+  padding: 1.5em .875em;
+  display: flex;
+  align-items: center;
+  gap: .75em;
+}
+
+/* Color Picker */
+.color-picker-input {
+  width: 61px;
+  height: 42px;
+  border: .5px solid var(--color-primary);
+
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  flex: 1;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
+  background-color: var(--color-bg);
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: .625em;
+  border-radius: 6px;
+  text-transform: capitalize;
+}
+
+.dropdown-header:hover {
+  background-color: var(--color-btn-bg);
+}
+
+.dropdown-header .arrow {
+  font-size: .75rem;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 6px;
+  background-color: var(--color-bg);
+  z-index: 1000;
+  display: none;
+}
+
+.dropdown-options li {
+  padding: .625em;
+  text-transform: capitalize;
+}
+
+.dropdown-options li:hover,
+.dropdown-options li:focus {
+  background-color: var(--color-btn-bg);
+}
+
+/* Submit Button */
+button {
+  background-color: var(--color-btn-bg);
+  border: 1px solid var(--color-btn-bg);
+  border-radius: 4px;
+  color: #FFFFFF;
+  padding: 1.25em .625em;
+  font-size: .75rem;
+  line-height: 1;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-bg);
+}
+
+/* Colors */
+.colors {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+/* Footer */
+.hex-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-primary);
+  padding-block: .6875em;
+}
