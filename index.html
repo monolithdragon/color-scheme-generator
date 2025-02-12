@@ -4,40 +4,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Onw CSS -->
     <link rel="stylesheet" href="src/style.css">
+
     <title>Color Scheme Generator</title>
   </head>
 
   <body>
     <div id="app">
+      <!-- Header Section -->
       <section class="header">
-        <input type="color" name="color-picker" id="color-picker">
-        <select name="color-picker-dropdown" id="color-picker-dropdown">
-          <option value="monochrome">Monochrome</option>
-          <option value="monochrome">Monochrome</option>
-          <option value="monochrome">Monochrome</option>
-          <option value="monochrome">Monochrome</option>
-          <option value="monochrome">Monochrome</option>
-          <option value="monochrome">Monochrome</option>
-        </select>
-        <button id="get-color-scheme">Get color scheme</button>
+        <form id="color-form">
+          <!-- Color Picker -->
+          <input type="color" name="color-picker" id="color-picker" class="color-picker-input">
+
+          <!-- Scheme Selector -->
+          <div class="dropdown">
+            <div class="dropdown-header">
+              <span id="dropdown-mode">Monochrome</span>
+              <span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
+            </div>
+            <ul class="dropdown-options"></ul>
+          </div>
+
+          <!-- Submit Form -->
+          <button type="submit" id="get-color-scheme">Get color scheme</button>
+        </form>
       </section>
-      <section class="colors">
-        <div class="color-box"></div>
-        <div class="color-box"></div>
-        <div class="color-box"></div>
-        <div class="color-box"></div>
-        <div class="color-box"></div>
-        <div class="color-box"></div>
-      </section>
-      <section class="hex-footer">
-        <p>#000000</p>
-        <p>#000000</p>
-        <p>#000000</p>
-        <p>#000000</p>
-        <p>#000000</p>
-        <p>#000000</p>
-      </section>
+
+      <!-- Main Section -->
+      <section class="colors"></section>
+
+      <!-- Footer Section -->
+      <section class="hex-footer"></section>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
